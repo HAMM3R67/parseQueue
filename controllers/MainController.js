@@ -1,7 +1,9 @@
 var app = angular.module('parseQ');
 
-app.controller('mainController', function($scope){
+app.controller('mainController', function($scope, parseService){
 	
-	$scope.test = "This is only a test!"
+	$scope.postData = function(){
+		parseService.postQ($scope.question)
+	}
 	
 })
